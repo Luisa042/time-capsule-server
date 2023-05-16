@@ -3,11 +3,13 @@ import fastify from 'fastify'
 const server = fastify()
 
 server.get('/hello', () => {
-    return 'hello'
+  return 'hello'
 })
 
-server.listen({
+server
+  .listen({
     port: 3333,
-}).then(() => {
+  })
+  .then(() => {
     console.log('HTTP server running on http://localhost:3333')
-})
+  })
